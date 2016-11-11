@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		97C68BCE1DD5490600CFDA07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C68BCD1DD5490600CFDA07 /* main.m */; };
+		97C68BD11DD5490600CFDA07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C68BD01DD5490600CFDA07 /* AppDelegate.m */; };
+		97C68BD41DD5490600CFDA07 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C68BD31DD5490600CFDA07 /* ViewController.m */; };
+		97C68BD71DD5490600CFDA07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C68BD51DD5490600CFDA07 /* Main.storyboard */; };
+		97C68BD91DD5490600CFDA07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C68BD81DD5490600CFDA07 /* Assets.xcassets */; };
+		97C68BDC1DD5490600CFDA07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C68BDA1DD5490600CFDA07 /* LaunchScreen.storyboard */; };
+		97C68BE71DD5490600CFDA07 /* pastel_UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C68BE61DD5490600CFDA07 /* pastel_UITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		97C68BE31DD5490600CFDA07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97C68BC11DD5490600CFDA07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97C68BC81DD5490600CFDA07;
+			remoteInfo = pastel.;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		97C68BC91DD5490600CFDA07 /* pastel..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pastel..app; sourceTree = BUILT_PRODUCTS_DIR; };
+		97C68BCD1DD5490600CFDA07 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		97C68BCF1DD5490600CFDA07 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		97C68BD01DD5490600CFDA07 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		97C68BD21DD5490600CFDA07 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		97C68BD31DD5490600CFDA07 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		97C68BD61DD5490600CFDA07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		97C68BD81DD5490600CFDA07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		97C68BDB1DD5490600CFDA07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		97C68BDD1DD5490600CFDA07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97C68BE21DD5490600CFDA07 /* pastel.UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pastel.UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		97C68BE61DD5490600CFDA07 /* pastel_UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pastel_UITests.m; sourceTree = "<group>"; };
+		97C68BE81DD5490600CFDA07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		97C68BC61DD5490600CFDA07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97C68BDF1DD5490600CFDA07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		97C68BC01DD5490600CFDA07 = {
+			isa = PBXGroup;
+			children = (
+				97C68BCB1DD5490600CFDA07 /* pastel. */,
+				97C68BE51DD5490600CFDA07 /* pastel.UITests */,
+				97C68BCA1DD5490600CFDA07 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		97C68BCA1DD5490600CFDA07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97C68BC91DD5490600CFDA07 /* pastel..app */,
+				97C68BE21DD5490600CFDA07 /* pastel.UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		97C68BCB1DD5490600CFDA07 /* pastel. */ = {
+			isa = PBXGroup;
+			children = (
+				97C68BCF1DD5490600CFDA07 /* AppDelegate.h */,
+				97C68BD01DD5490600CFDA07 /* AppDelegate.m */,
+				97C68BD21DD5490600CFDA07 /* ViewController.h */,
+				97C68BD31DD5490600CFDA07 /* ViewController.m */,
+				97C68BD51DD5490600CFDA07 /* Main.storyboard */,
+				97C68BD81DD5490600CFDA07 /* Assets.xcassets */,
+				97C68BDA1DD5490600CFDA07 /* LaunchScreen.storyboard */,
+				97C68BDD1DD5490600CFDA07 /* Info.plist */,
+				97C68BCC1DD5490600CFDA07 /* Supporting Files */,
+			);
+			path = pastel.;
+			sourceTree = "<group>";
+		};
+		97C68BCC1DD5490600CFDA07 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				97C68BCD1DD5490600CFDA07 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		97C68BE51DD5490600CFDA07 /* pastel.UITests */ = {
+			isa = PBXGroup;
+			children = (
+				97C68BE61DD5490600CFDA07 /* pastel_UITests.m */,
+				97C68BE81DD5490600CFDA07 /* Info.plist */,
+			);
+			path = pastel.UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		97C68BC81DD5490600CFDA07 /* pastel. */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97C68BEB1DD5490600CFDA07 /* Build configuration list for PBXNativeTarget "pastel." */;
+			buildPhases = (
+				97C68BC51DD5490600CFDA07 /* Sources */,
+				97C68BC61DD5490600CFDA07 /* Frameworks */,
+				97C68BC71DD5490600CFDA07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pastel.;
+			productName = pastel.;
+			productReference = 97C68BC91DD5490600CFDA07 /* pastel..app */;
+			productType = "com.apple.product-type.application";
+		};
+		97C68BE11DD5490600CFDA07 /* pastel.UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97C68BEE1DD5490600CFDA07 /* Build configuration list for PBXNativeTarget "pastel.UITests" */;
+			buildPhases = (
+				97C68BDE1DD5490600CFDA07 /* Sources */,
+				97C68BDF1DD5490600CFDA07 /* Frameworks */,
+				97C68BE01DD5490600CFDA07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97C68BE41DD5490600CFDA07 /* PBXTargetDependency */,
+			);
+			name = pastel.UITests;
+			productName = pastel.UITests;
+			productReference = 97C68BE21DD5490600CFDA07 /* pastel.UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		97C68BC11DD5490600CFDA07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = tangentinc.;
+				TargetAttributes = {
+					97C68BC81DD5490600CFDA07 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 7K6ZTDFM48;
+						ProvisioningStyle = Automatic;
+					};
+					97C68BE11DD5490600CFDA07 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 7K6ZTDFM48;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 97C68BC81DD5490600CFDA07;
+					};
+				};
+			};
+			buildConfigurationList = 97C68BC41DD5490600CFDA07 /* Build configuration list for PBXProject "pastel." */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 97C68BC01DD5490600CFDA07;
+			productRefGroup = 97C68BCA1DD5490600CFDA07 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				97C68BC81DD5490600CFDA07 /* pastel. */,
+				97C68BE11DD5490600CFDA07 /* pastel.UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		97C68BC71DD5490600CFDA07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97C68BDC1DD5490600CFDA07 /* LaunchScreen.storyboard in Resources */,
+				97C68BD91DD5490600CFDA07 /* Assets.xcassets in Resources */,
+				97C68BD71DD5490600CFDA07 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97C68BE01DD5490600CFDA07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		97C68BC51DD5490600CFDA07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97C68BD41DD5490600CFDA07 /* ViewController.m in Sources */,
+				97C68BD11DD5490600CFDA07 /* AppDelegate.m in Sources */,
+				97C68BCE1DD5490600CFDA07 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97C68BDE1DD5490600CFDA07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97C68BE71DD5490600CFDA07 /* pastel_UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		97C68BE41DD5490600CFDA07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97C68BC81DD5490600CFDA07 /* pastel. */;
+			targetProxy = 97C68BE31DD5490600CFDA07 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		97C68BD51DD5490600CFDA07 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97C68BD61DD5490600CFDA07 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		97C68BDA1DD5490600CFDA07 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97C68BDB1DD5490600CFDA07 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		97C68BE91DD5490600CFDA07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		97C68BEA1DD5490600CFDA07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		97C68BEC1DD5490600CFDA07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7K6ZTDFM48;
+				INFOPLIST_FILE = pastel./Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TNGT.pastel-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		97C68BED1DD5490600CFDA07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7K6ZTDFM48;
+				INFOPLIST_FILE = pastel./Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TNGT.pastel-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		97C68BEF1DD5490600CFDA07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7K6ZTDFM48;
+				INFOPLIST_FILE = pastel.UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TNGT.pastel-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = pastel.;
+			};
+			name = Debug;
+		};
+		97C68BF01DD5490600CFDA07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7K6ZTDFM48;
+				INFOPLIST_FILE = pastel.UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TNGT.pastel-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = pastel.;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		97C68BC41DD5490600CFDA07 /* Build configuration list for PBXProject "pastel." */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97C68BE91DD5490600CFDA07 /* Debug */,
+				97C68BEA1DD5490600CFDA07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97C68BEB1DD5490600CFDA07 /* Build configuration list for PBXNativeTarget "pastel." */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97C68BEC1DD5490600CFDA07 /* Debug */,
+				97C68BED1DD5490600CFDA07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		97C68BEE1DD5490600CFDA07 /* Build configuration list for PBXNativeTarget "pastel.UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97C68BEF1DD5490600CFDA07 /* Debug */,
+				97C68BF01DD5490600CFDA07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 97C68BC11DD5490600CFDA07 /* Project object */;
+}
