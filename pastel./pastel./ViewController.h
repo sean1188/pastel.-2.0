@@ -10,6 +10,13 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *logo;
+@property (weak, nonatomic) IBOutlet UILabel *header;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttons;
+@property (weak, nonatomic) IBOutlet UIButton *soundButton;
+
+- (IBAction)playButton:(id)sender;
+- (IBAction)soundButton:(id)sender;
 
 @end
 
