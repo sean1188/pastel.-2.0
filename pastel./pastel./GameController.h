@@ -10,4 +10,11 @@
 
 @interface GameController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UIView *dotsView;
+@property (weak, nonatomic) IBOutlet UILabel *counterLabel;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttonCollection;
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *imageCollection;
+
 @end
