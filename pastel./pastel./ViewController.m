@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import <AVFoundation/AVFoundation.h>
 @interface ViewController ()
 
 @end
@@ -46,6 +46,12 @@
 }
 
 - (IBAction)playButton:(id)sender {
+    //button sound
+    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"play"  ofType:@"mp3"];
+    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
+    [player play];
+    //init exit animations
     [UIView animateWithDuration:0.5 animations:^{
         _logo.transform = CGAffineTransformMakeScale(0, 0);
         _header.alpha = 0;

@@ -7,18 +7,23 @@
 //
 
 #import "GameController.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface GameController ()
-
+@property (nonatomic, retain) NSTimer *timer;
 @end
 
 @implementation GameController
-NSTimer *timer;
+//basic game mechanic variables
 NSTimer *Countdowntimer;
 float timeInt;
+int gameScore;
+//combo variables
+NSTimer *comboTimer;
 - (void)viewDidLoad {
     [super viewDidLoad];
     //  additional setup for animation after loading the view.
+    _redView.alpha = 0;
     _dotsView.layer.cornerRadius = 15.0f;
     _dotsView.layer.shadowRadius = 3; _dotsView.layer.shadowOpacity = 0.3; _dotsView.layer.shadowOffset = CGSizeMake(1, 3);
     _dotsView.transform = CGAffineTransformMakeScale(0, 0); _dotsView.alpha = 0;
@@ -26,6 +31,13 @@ float timeInt;
     for (UIButton * button in _buttonCollection) {
         button.enabled = NO;
     }
+    //setup game timer and score
+    timeInt = 2;
+    [_timeLabel setText:[NSString stringWithFormat:@"%0.2f",timeInt]];
+    gameScore = 0;
+    [_scoreLabel setText:@"000"];
+
+    
 }
 -(void)viewDidAppear:(BOOL)animated{
     //startup animation
@@ -53,21 +65,42 @@ int startTimerVal = 0;
     }
 }
 -(void) start{
-    timeInt = 1;
-    timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(timeFrame) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(timeFrame) userInfo:nil repeats:YES];
     [self changeButton];
 }
 
 -(void)timeFrame{
+    //main timer function
     timeInt = timeInt - 0.01;
     if(timeInt > 0){
-    [_timeLabel setText:[NSString stringWithFormat:@"%0.2fs",timeInt]];
+        //update background color
+        _redView.alpha = 0.8- (timeInt /1);
+        //update time label
+        [_timeLabel setText:[NSString stringWithFormat:@"%0.2fs",timeInt]];
     }
     else{
+        [self.timer invalidate];
+        self.timer = nil;
         [_timeLabel setText:@"0.00s"];
-        timer = nil; [timer invalidate];
+        for (UIButton *b in _buttonCollection) {
+            b.enabled = NO;
+        }
+        //game over animation
+        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+        [UIView animateWithDuration:0.2 animations:^{
+            _dotsView.transform = CGAffineTransformMakeScale(1.1, 1.1);
+        }completion:^(BOOL finished) {
+            [UIView animateWithDuration:0.3 animations:^{
+                _dotsView.transform = CGAffineTransformMakeScale(0.01, 0.01);
+            }completion:^(BOOL finished) {
+                //init scoreview
+                
+            }];
+        }];
     }
+  
 }
+
 - (IBAction)one:(id)sender {
     [self changeButton];
 }
@@ -108,7 +141,11 @@ int startTimerVal = 0;
 }
 //called for every button press
 -(void) changeButton{
-    timeInt = timeInt + 0.25;
+    //increase time and score (normal)
+    timeInt = timeInt + 0.4;
+    gameScore = gameScore + 5;
+    [_scoreLabel setText:[NSString stringWithFormat:@"%i", gameScore]];
+    //init next button
     int rand = arc4random()%9;
     int i = -1;
     for (UIButton *button in _buttonCollection) {
@@ -120,8 +157,8 @@ int startTimerVal = 0;
             button.enabled = NO;
         }
     }
-    int j = -1;
     //animation
+    int j = -1;
     for(UIImageView *imge in _imageCollection){
         j ++;
         if (j == rand) {

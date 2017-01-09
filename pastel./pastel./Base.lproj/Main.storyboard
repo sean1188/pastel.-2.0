@@ -132,6 +132,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e8J-oy-x4g" userLabel="redView">
+                                <rect key="frame" x="-3" y="-1" width="378" height="668"/>
+                                <color key="backgroundColor" red="0.90708280456852797" green="0.40249644735819312" blue="0.36454635298904392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="score : 000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDa-8e-b7a">
                                 <rect key="frame" x="75" y="38" width="224" height="36"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-MediumItalic" family="Avenir Next" pointSize="32"/>
@@ -253,7 +257,6 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="RaT-sW-5vS" firstAttribute="centerX" secondItem="Fkb-RR-INn" secondAttribute="centerX" id="Bd6-vN-l17"/>
                                     <constraint firstItem="RaT-sW-5vS" firstAttribute="centerY" secondItem="Fkb-RR-INn" secondAttribute="centerY" id="yr5-VV-3Iq"/>
@@ -341,14 +344,19 @@
                             <constraint firstItem="jcF-2d-P2r" firstAttribute="centerY" secondItem="ocM-Sv-r9C" secondAttribute="centerY" id="ROy-Jf-zCl"/>
                             <constraint firstItem="8yK-mD-HoU" firstAttribute="height" secondItem="CxF-ae-2Gv" secondAttribute="height" id="Rwe-7c-gFm"/>
                             <constraint firstItem="B5B-41-j3y" firstAttribute="centerX" secondItem="ek5-Rv-vGK" secondAttribute="centerX" id="S2u-IR-xMf"/>
+                            <constraint firstItem="e8J-oy-x4g" firstAttribute="centerX" secondItem="4Fm-SX-Izi" secondAttribute="centerX" id="Sya-F4-Ie8"/>
+                            <constraint firstAttribute="trailing" secondItem="e8J-oy-x4g" secondAttribute="trailing" id="T1H-6O-7Fp"/>
                             <constraint firstItem="8yK-mD-HoU" firstAttribute="centerX" secondItem="CxF-ae-2Gv" secondAttribute="centerX" id="Tgb-CJ-aot"/>
                             <constraint firstItem="JFG-ca-JX0" firstAttribute="height" secondItem="FWA-iS-tyE" secondAttribute="height" id="Tyg-oH-n8S"/>
                             <constraint firstItem="pay-7B-DyF" firstAttribute="centerX" secondItem="gi9-fm-llE" secondAttribute="centerX" id="UO1-P0-IYw"/>
+                            <constraint firstItem="J98-bq-qS4" firstAttribute="top" secondItem="e8J-oy-x4g" secondAttribute="bottom" id="URQ-8o-AJ8"/>
                             <constraint firstItem="pay-7B-DyF" firstAttribute="centerY" secondItem="gi9-fm-llE" secondAttribute="centerY" id="WgO-HW-cGN"/>
+                            <constraint firstItem="e8J-oy-x4g" firstAttribute="top" secondItem="4Fm-SX-Izi" secondAttribute="top" id="aHf-3n-ADt"/>
                             <constraint firstItem="8yK-mD-HoU" firstAttribute="centerY" secondItem="CxF-ae-2Gv" secondAttribute="centerY" id="abR-m3-BJa"/>
                             <constraint firstItem="pay-7B-DyF" firstAttribute="height" secondItem="gi9-fm-llE" secondAttribute="height" id="bw6-oq-bSQ"/>
                             <constraint firstItem="nSS-H6-B5Z" firstAttribute="centerX" secondItem="yJP-wv-GCb" secondAttribute="centerX" id="cXx-MT-2Ot"/>
                             <constraint firstItem="mst-E7-Dzm" firstAttribute="width" secondItem="d3z-xl-XGk" secondAttribute="width" id="cm3-Pn-opb"/>
+                            <constraint firstItem="e8J-oy-x4g" firstAttribute="leading" secondItem="4Fm-SX-Izi" secondAttribute="leading" id="cuK-HS-7Gj"/>
                             <constraint firstItem="afl-jU-sYg" firstAttribute="centerX" secondItem="049-cS-V3v" secondAttribute="centerX" id="dtQ-UQ-lHc"/>
                             <constraint firstItem="mst-E7-Dzm" firstAttribute="centerY" secondItem="d3z-xl-XGk" secondAttribute="centerY" id="eMn-Dk-yRW"/>
                             <constraint firstItem="J98-bq-qS4" firstAttribute="top" secondItem="FRS-Kx-IyH" secondAttribute="bottom" constant="20" id="f0K-5v-Ztr"/>
@@ -356,6 +364,7 @@
                             <constraint firstItem="wDa-8e-b7a" firstAttribute="top" secondItem="uRq-Rk-BKt" secondAttribute="bottom" constant="18" id="g5D-Az-dXg"/>
                             <constraint firstItem="pay-7B-DyF" firstAttribute="width" secondItem="gi9-fm-llE" secondAttribute="width" id="h57-17-PT2"/>
                             <constraint firstItem="Fkb-RR-INn" firstAttribute="centerY" secondItem="4Fm-SX-Izi" secondAttribute="centerY" id="iSE-cl-33s"/>
+                            <constraint firstItem="e8J-oy-x4g" firstAttribute="centerY" secondItem="4Fm-SX-Izi" secondAttribute="centerY" id="meD-wd-T4g"/>
                             <constraint firstItem="Fkb-RR-INn" firstAttribute="centerX" secondItem="4Fm-SX-Izi" secondAttribute="centerX" id="ohy-hd-9mV"/>
                             <constraint firstItem="afl-jU-sYg" firstAttribute="width" secondItem="049-cS-V3v" secondAttribute="width" id="ufF-y1-ZBr"/>
                             <constraint firstItem="vYS-6M-L6Z" firstAttribute="height" secondItem="XPh-eK-kfD" secondAttribute="height" id="vi2-Pm-ZZp"/>
@@ -366,6 +375,7 @@
                     <connections>
                         <outlet property="counterLabel" destination="FRS-Kx-IyH" id="9JD-y2-cs4"/>
                         <outlet property="dotsView" destination="Fkb-RR-INn" id="D9s-yU-qNL"/>
+                        <outlet property="redView" destination="e8J-oy-x4g" id="gEg-9v-Szw"/>
                         <outlet property="scoreLabel" destination="wDa-8e-b7a" id="Pi7-kZ-nmU"/>
                         <outlet property="timeLabel" destination="JRp-xR-bbp" id="wTJ-lW-YJT"/>
                         <outletCollection property="buttonCollection" destination="mst-E7-Dzm" id="ayy-PZ-FnR"/>

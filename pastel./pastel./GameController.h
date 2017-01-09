@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <AVFoundation/AVFoundation.h>
 @interface GameController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *counterLabel;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttonCollection;
 @property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *imageCollection;
+@property (weak, nonatomic) IBOutlet UIView *redView;
 
 @end
