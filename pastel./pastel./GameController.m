@@ -10,16 +10,18 @@
 #import <AudioToolbox/AudioToolbox.h>
 
 @interface GameController ()
-@property (nonatomic, retain) NSTimer *timer;
 @end
 
 @implementation GameController
 //basic game mechanic variables
 NSTimer *Countdowntimer;
+NSTimer *timer;
 float timeInt;
 int gameScore;
 //combo variables
 NSTimer *comboTimer;
+bool userOnFire;
+int comboCounter = 1;
 - (void)viewDidLoad {
     [super viewDidLoad];
     //  additional setup for animation after loading the view.
@@ -32,6 +34,7 @@ NSTimer *comboTimer;
         button.enabled = NO;
     }
     //setup game timer and score
+    comboCounter = 1;
     timeInt = 2;
     [_timeLabel setText:[NSString stringWithFormat:@"%0.2f",timeInt]];
     gameScore = 0;
@@ -41,11 +44,11 @@ NSTimer *comboTimer;
 }
 -(void)viewDidAppear:(BOOL)animated{
     //startup animation
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.2 animations:^{
         _dotsView.transform = CGAffineTransformMakeScale(1.2, 1.2);
         _dotsView.alpha = 1;
     }completion:^(BOOL finished) {
-        [UIView animateWithDuration:0.4 animations:^{
+        [UIView animateWithDuration:0.3 animations:^{
             _dotsView.transform = CGAffineTransformMakeScale(1, 1);
             _scoreLabel.alpha = 1; _timeLabel.alpha = 1; _counterLabel.alpha = 1;
         }completion:^(BOOL finished) {
@@ -65,8 +68,15 @@ int startTimerVal = 0;
     }
 }
 -(void) start{
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(timeFrame) userInfo:nil repeats:YES];
+    timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(timeFrame) userInfo:nil repeats:YES];
     [self changeButton];
+    userOnFire = YES;
+    comboTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(comboTimeLimit) userInfo:nil repeats:NO];
+}
+
+-(void) comboTimeLimit{
+    userOnFire = NO;
+    comboCounter = 1;
 }
 
 -(void)timeFrame{
@@ -79,8 +89,9 @@ int startTimerVal = 0;
         [_timeLabel setText:[NSString stringWithFormat:@"%0.2fs",timeInt]];
     }
     else{
-        [self.timer invalidate];
-        self.timer = nil;
+        //game over
+        [timer invalidate];
+        timer = nil;
         [_timeLabel setText:@"0.00s"];
         for (UIButton *b in _buttonCollection) {
             b.enabled = NO;
@@ -88,6 +99,10 @@ int startTimerVal = 0;
         //game over animation
         AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
         [UIView animateWithDuration:0.2 animations:^{
+            _scoreLabel.alpha = 0;
+            _timeLabel.alpha = 0;
+            _counterLabel.alpha = 0;
+            _redView.alpha = 0;
             _dotsView.transform = CGAffineTransformMakeScale(1.1, 1.1);
         }completion:^(BOOL finished) {
             [UIView animateWithDuration:0.3 animations:^{
@@ -141,9 +156,27 @@ int startTimerVal = 0;
 }
 //called for every button press
 -(void) changeButton{
-    //increase time and score (normal)
-    timeInt = timeInt + 0.4;
-    gameScore = gameScore + 5;
+    //increase time
+    switch (arc4random()%3) {
+        case 0:
+            timeInt = timeInt + 0.4;
+            break;
+        case 1:
+            timeInt = timeInt + 0.3;
+            break;
+        case 2:
+            timeInt = timeInt + 0.2;
+            break;
+        default:
+            break;
+    }
+    //score computing & combo timer config
+    [comboTimer invalidate]; comboTimer = nil;
+    if (userOnFire == YES) {
+        comboCounter ++;
+    }
+    gameScore = gameScore + (10 *comboCounter);
+    [_counterLabel setText:[NSString stringWithFormat:@"%ix",comboCounter]];
     [_scoreLabel setText:[NSString stringWithFormat:@"%i", gameScore]];
     //init next button
     int rand = arc4random()%9;
@@ -166,6 +199,8 @@ int startTimerVal = 0;
                 imge.transform = CGAffineTransformMakeScale(1.2, 1.2);
         
             }completion:^(BOOL finished) {
+                comboTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(comboTimeLimit) userInfo:nil repeats:NO];
+                userOnFire = YES;
                 [UIView animateWithDuration:0.1 animations:^{
                     imge.transform= CGAffineTransformMakeScale(1, 1);
                 }];
