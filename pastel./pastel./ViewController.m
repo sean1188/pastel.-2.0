@@ -9,7 +9,9 @@
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
 @interface ViewController ()
-
+{
+    AVAudioPlayer *player;
+}
 @end
 
 @implementation ViewController
@@ -49,7 +51,9 @@
     //button sound
     NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"play"  ofType:@"mp3"];
     NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
-    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
+    player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
+    player.delegate = self;
+    [player prepareToPlay];
     [player play];
     //init exit animations
     [UIView animateWithDuration:0.5 animations:^{

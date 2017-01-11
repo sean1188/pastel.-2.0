@@ -17,5 +17,7 @@
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttonCollection;
 @property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *imageCollection;
 @property (weak, nonatomic) IBOutlet UIView *redView;
+@property (weak, nonatomic) IBOutlet UIVisualEffectView *blurview;
+@property (weak, nonatomic) IBOutlet UILabel *countdownLabel;
 
 @end

@@ -25,6 +25,8 @@ int comboCounter = 1;
 - (void)viewDidLoad {
     [super viewDidLoad];
     //  additional setup for animation after loading the view.
+    _blurview.alpha = 0;
+    _blurview.frame = self.view.frame;
     _redView.alpha = 0;
     _dotsView.layer.cornerRadius = 15.0f;
     _dotsView.layer.shadowRadius = 3; _dotsView.layer.shadowOpacity = 0.3; _dotsView.layer.shadowOffset = CGSizeMake(1, 3);
@@ -34,6 +36,7 @@ int comboCounter = 1;
         button.enabled = NO;
     }
     //setup game timer and score
+    startTimerVal = 0;
     comboCounter = 1;
     timeInt = 2;
     [_timeLabel setText:[NSString stringWithFormat:@"%0.2f",timeInt]];
@@ -53,6 +56,9 @@ int comboCounter = 1;
             _scoreLabel.alpha = 1; _timeLabel.alpha = 1; _counterLabel.alpha = 1;
         }completion:^(BOOL finished) {
             //timer for starting game
+            [UIView animateWithDuration:0.2 animations:^{
+                _blurview.alpha = 1;
+            }];
             Countdowntimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(Countdown) userInfo:nil repeats:YES];
         }];
     }];
@@ -61,7 +67,11 @@ int comboCounter = 1;
 int startTimerVal = 0;
 -(void) Countdown{
     startTimerVal ++;
+    [_countdownLabel setText:[NSString stringWithFormat:@"%i", ( 3-startTimerVal)]];
     if (startTimerVal == 3) {
+        [UIView animateWithDuration:0.1 animations:^{
+            _blurview.alpha = 0;
+        }];
         [Countdowntimer invalidate];
         Countdowntimer = nil;
         [self start];
@@ -109,7 +119,8 @@ int startTimerVal = 0;
                 _dotsView.transform = CGAffineTransformMakeScale(0.01, 0.01);
             }completion:^(BOOL finished) {
                 //init scoreview
-                
+                [[NSUserDefaults standardUserDefaults] setInteger:gameScore forKey:@"score"];
+                [self performSegueWithIdentifier:@"gamedone" sender:self];
             }];
         }];
     }
@@ -152,7 +163,6 @@ int startTimerVal = 0;
 }
 - (IBAction)nine:(id)sender {
     [self changeButton];
-
 }
 //called for every button press
 -(void) changeButton{
@@ -174,6 +184,13 @@ int startTimerVal = 0;
     [comboTimer invalidate]; comboTimer = nil;
     if (userOnFire == YES) {
         comboCounter ++;
+        [UIView animateWithDuration:0.1 animations:^{
+            _counterLabel.transform = CGAffineTransformMakeScale(1.1, 1.1);
+        }completion:^(BOOL finished) {
+            [UIView animateWithDuration:0.1 animations:^{
+                _counterLabel.transform = CGAffineTransformMakeScale(1, 1);
+            }];
+        }];
     }
     gameScore = gameScore + (10 *comboCounter);
     [_counterLabel setText:[NSString stringWithFormat:@"%ix",comboCounter]];

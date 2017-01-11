@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		540830ED1E22A2AF00D9959A /* play.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 540830EC1E22A2AF00D9959A /* play.mp3 */; };
 		544850401E1EA364001E8ABD /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5448503F1E1EA364001E8ABD /* GameController.m */; };
+		546BE8FE1E24D3F200D34659 /* gamedone.m in Sources */ = {isa = PBXBuildFile; fileRef = 546BE8FD1E24D3F200D34659 /* gamedone.m */; };
 		54FC05061E23E83F00B1B6B2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54FC05051E23E83F00B1B6B2 /* AVFoundation.framework */; };
 		97C68BCE1DD5490600CFDA07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C68BCD1DD5490600CFDA07 /* main.m */; };
 		97C68BD11DD5490600CFDA07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C68BD01DD5490600CFDA07 /* AppDelegate.m */; };
@@ -33,6 +34,8 @@
 		540830EC1E22A2AF00D9959A /* play.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = play.mp3; sourceTree = "<group>"; };
 		5448503E1E1EA364001E8ABD /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
 		5448503F1E1EA364001E8ABD /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
+		546BE8FC1E24D3F200D34659 /* gamedone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gamedone.h; sourceTree = "<group>"; };
+		546BE8FD1E24D3F200D34659 /* gamedone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gamedone.m; sourceTree = "<group>"; };
 		54FC05051E23E83F00B1B6B2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		97C68BC91DD5490600CFDA07 /* pastel..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pastel..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C68BCD1DD5490600CFDA07 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -104,6 +107,8 @@
 				97C68BD31DD5490600CFDA07 /* ViewController.m */,
 				5448503E1E1EA364001E8ABD /* GameController.h */,
 				5448503F1E1EA364001E8ABD /* GameController.m */,
+				546BE8FC1E24D3F200D34659 /* gamedone.h */,
+				546BE8FD1E24D3F200D34659 /* gamedone.m */,
 				97C68BD51DD5490600CFDA07 /* Main.storyboard */,
 				540830EC1E22A2AF00D9959A /* play.mp3 */,
 				97C68BD81DD5490600CFDA07 /* Assets.xcassets */,
@@ -238,6 +243,7 @@
 			files = (
 				97C68BD41DD5490600CFDA07 /* ViewController.m in Sources */,
 				544850401E1EA364001E8ABD /* GameController.m in Sources */,
+				546BE8FE1E24D3F200D34659 /* gamedone.m in Sources */,
 				97C68BD11DD5490600CFDA07 /* AppDelegate.m in Sources */,
 				97C68BCE1DD5490600CFDA07 /* main.m in Sources */,
 			);
