@@ -68,6 +68,21 @@
     }];
 }
 
+- (IBAction)leaderB:(id)sender {
+    //init exit animations
+    [UIView animateWithDuration:0.5 animations:^{
+        _logo.transform = CGAffineTransformMakeScale(0, 0);
+        _header.alpha = 0;
+        for (UIButton *button in _buttons) {
+            button.alpha = 0;
+        }
+        _soundButton.alpha = 0;
+    }completion:^(BOOL finished) {
+        [self performSegueWithIdentifier:@"LB" sender:self];
+    }];
+}
+
+
 - (IBAction)soundButton:(id)sender {
 }
 @end

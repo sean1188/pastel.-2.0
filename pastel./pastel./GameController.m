@@ -167,7 +167,7 @@ int startTimerVal = 0;
 //called for every button press
 -(void) changeButton{
     //increase time
-    switch (arc4random()%3) {
+    switch (arc4random()%4) {
         case 0:
             timeInt = timeInt + 0.4;
             break;
@@ -176,6 +176,9 @@ int startTimerVal = 0;
             break;
         case 2:
             timeInt = timeInt + 0.2;
+            break;
+            case 3:
+            timeInt = timeInt + 0.3;
             break;
         default:
             break;

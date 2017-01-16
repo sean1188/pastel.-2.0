@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		540830ED1E22A2AF00D9959A /* play.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 540830EC1E22A2AF00D9959A /* play.mp3 */; };
+		540F88C41E25E0FE00950458 /* tutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 540F88C31E25E0FE00950458 /* tutViewController.m */; };
 		544850401E1EA364001E8ABD /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5448503F1E1EA364001E8ABD /* GameController.m */; };
 		546BE8FE1E24D3F200D34659 /* gamedone.m in Sources */ = {isa = PBXBuildFile; fileRef = 546BE8FD1E24D3F200D34659 /* gamedone.m */; };
+		54E7C5831E275954002F7F80 /* leaderBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E7C5821E275954002F7F80 /* leaderBoardViewController.m */; };
+		54F479121E2737FC00570A78 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54F479111E2737FC00570A78 /* GoogleService-Info.plist */; };
 		54FC05061E23E83F00B1B6B2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54FC05051E23E83F00B1B6B2 /* AVFoundation.framework */; };
+		54FF26861E28667500E9AE89 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FF26851E28667500E9AE89 /* CollectionViewCell.m */; };
 		97C68BCE1DD5490600CFDA07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C68BCD1DD5490600CFDA07 /* main.m */; };
 		97C68BD11DD5490600CFDA07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C68BD01DD5490600CFDA07 /* AppDelegate.m */; };
 		97C68BD41DD5490600CFDA07 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C68BD31DD5490600CFDA07 /* ViewController.m */; };
@@ -18,6 +22,8 @@
 		97C68BD91DD5490600CFDA07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C68BD81DD5490600CFDA07 /* Assets.xcassets */; };
 		97C68BDC1DD5490600CFDA07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C68BDA1DD5490600CFDA07 /* LaunchScreen.storyboard */; };
 		97C68BE71DD5490600CFDA07 /* pastel_UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C68BE61DD5490600CFDA07 /* pastel_UITests.m */; };
+		CE69A33DC0674280A36F6BC9 /* libPods-pastel.UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 399907902A2BD5B8A7E0C55B /* libPods-pastel.UITests.a */; };
+		DAE02E77851828B01668DE26 /* libPods-pastel..a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE3B12131E9026C8CCB8CD19 /* libPods-pastel..a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,12 +37,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		399907902A2BD5B8A7E0C55B /* libPods-pastel.UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pastel.UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FE20C9F5FC4F228669C62CD /* Pods-pastel.UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pastel.UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-pastel.UITests/Pods-pastel.UITests.release.xcconfig"; sourceTree = "<group>"; };
 		540830EC1E22A2AF00D9959A /* play.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = play.mp3; sourceTree = "<group>"; };
+		540F88C21E25E0FE00950458 /* tutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tutViewController.h; sourceTree = "<group>"; };
+		540F88C31E25E0FE00950458 /* tutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tutViewController.m; sourceTree = "<group>"; };
 		5448503E1E1EA364001E8ABD /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
 		5448503F1E1EA364001E8ABD /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
 		546BE8FC1E24D3F200D34659 /* gamedone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gamedone.h; sourceTree = "<group>"; };
 		546BE8FD1E24D3F200D34659 /* gamedone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gamedone.m; sourceTree = "<group>"; };
+		54E7C5811E275954002F7F80 /* leaderBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = leaderBoardViewController.h; sourceTree = "<group>"; };
+		54E7C5821E275954002F7F80 /* leaderBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = leaderBoardViewController.m; sourceTree = "<group>"; };
+		54F479111E2737FC00570A78 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		54FC05051E23E83F00B1B6B2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		54FF26841E28667500E9AE89 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		54FF26851E28667500E9AE89 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		595EFFA28FEAFE6AC0BBA7F1 /* Pods-pastel.UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pastel.UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pastel.UITests/Pods-pastel.UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		97C68BC91DD5490600CFDA07 /* pastel..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pastel..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C68BCD1DD5490600CFDA07 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		97C68BCF1DD5490600CFDA07 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -50,6 +66,9 @@
 		97C68BE21DD5490600CFDA07 /* pastel.UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pastel.UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C68BE61DD5490600CFDA07 /* pastel_UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pastel_UITests.m; sourceTree = "<group>"; };
 		97C68BE81DD5490600CFDA07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE3B12131E9026C8CCB8CD19 /* libPods-pastel..a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pastel..a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4F4C2DCFE0B77EF5BFE9507 /* Pods-pastel..release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pastel..release.xcconfig"; path = "Pods/Target Support Files/Pods-pastel./Pods-pastel..release.xcconfig"; sourceTree = "<group>"; };
+		E2FD20D866C8E9C73C17DE92 /* Pods-pastel..debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pastel..debug.xcconfig"; path = "Pods/Target Support Files/Pods-pastel./Pods-pastel..debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54FC05061E23E83F00B1B6B2 /* AVFoundation.framework in Frameworks */,
+				DAE02E77851828B01668DE26 /* libPods-pastel..a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE69A33DC0674280A36F6BC9 /* libPods-pastel.UITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,8 +96,32 @@
 			isa = PBXGroup;
 			children = (
 				54FC05051E23E83F00B1B6B2 /* AVFoundation.framework */,
+				AE3B12131E9026C8CCB8CD19 /* libPods-pastel..a */,
+				399907902A2BD5B8A7E0C55B /* libPods-pastel.UITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54FF26831E28665D00E9AE89 /* LB */ = {
+			isa = PBXGroup;
+			children = (
+				54FF26841E28667500E9AE89 /* CollectionViewCell.h */,
+				54FF26851E28667500E9AE89 /* CollectionViewCell.m */,
+				54E7C5811E275954002F7F80 /* leaderBoardViewController.h */,
+				54E7C5821E275954002F7F80 /* leaderBoardViewController.m */,
+			);
+			name = LB;
+			sourceTree = "<group>";
+		};
+		58D5A01F61A9D0889D6E6931 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E2FD20D866C8E9C73C17DE92 /* Pods-pastel..debug.xcconfig */,
+				B4F4C2DCFE0B77EF5BFE9507 /* Pods-pastel..release.xcconfig */,
+				595EFFA28FEAFE6AC0BBA7F1 /* Pods-pastel.UITests.debug.xcconfig */,
+				3FE20C9F5FC4F228669C62CD /* Pods-pastel.UITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		97C68BC01DD5490600CFDA07 = {
@@ -86,6 +131,7 @@
 				97C68BE51DD5490600CFDA07 /* pastel.UITests */,
 				97C68BCA1DD5490600CFDA07 /* Products */,
 				54FC05041E23E83E00B1B6B2 /* Frameworks */,
+				58D5A01F61A9D0889D6E6931 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,8 +149,11 @@
 			children = (
 				97C68BCF1DD5490600CFDA07 /* AppDelegate.h */,
 				97C68BD01DD5490600CFDA07 /* AppDelegate.m */,
+				540F88C21E25E0FE00950458 /* tutViewController.h */,
+				540F88C31E25E0FE00950458 /* tutViewController.m */,
 				97C68BD21DD5490600CFDA07 /* ViewController.h */,
 				97C68BD31DD5490600CFDA07 /* ViewController.m */,
+				54FF26831E28665D00E9AE89 /* LB */,
 				5448503E1E1EA364001E8ABD /* GameController.h */,
 				5448503F1E1EA364001E8ABD /* GameController.m */,
 				546BE8FC1E24D3F200D34659 /* gamedone.h */,
@@ -114,6 +163,7 @@
 				97C68BD81DD5490600CFDA07 /* Assets.xcassets */,
 				97C68BDA1DD5490600CFDA07 /* LaunchScreen.storyboard */,
 				97C68BDD1DD5490600CFDA07 /* Info.plist */,
+				54F479111E2737FC00570A78 /* GoogleService-Info.plist */,
 				97C68BCC1DD5490600CFDA07 /* Supporting Files */,
 			);
 			path = pastel.;
@@ -143,9 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97C68BEB1DD5490600CFDA07 /* Build configuration list for PBXNativeTarget "pastel." */;
 			buildPhases = (
+				796A7D1D61135BF25C416996 /* [CP] Check Pods Manifest.lock */,
 				97C68BC51DD5490600CFDA07 /* Sources */,
 				97C68BC61DD5490600CFDA07 /* Frameworks */,
 				97C68BC71DD5490600CFDA07 /* Resources */,
+				5F598A8ECD35C0EC2F7023DC /* [CP] Embed Pods Frameworks */,
+				3F69597E444D5B84D695C21C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -160,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97C68BEE1DD5490600CFDA07 /* Build configuration list for PBXNativeTarget "pastel.UITests" */;
 			buildPhases = (
+				CCAC6FD115CEBCE5057A8AB4 /* [CP] Check Pods Manifest.lock */,
 				97C68BDE1DD5490600CFDA07 /* Sources */,
 				97C68BDF1DD5490600CFDA07 /* Frameworks */,
 				97C68BE01DD5490600CFDA07 /* Resources */,
+				22F6C934D490AFE7B6B9854B /* [CP] Embed Pods Frameworks */,
+				781623B38B0398B875D5C5EF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,6 +278,7 @@
 			files = (
 				97C68BDC1DD5490600CFDA07 /* LaunchScreen.storyboard in Resources */,
 				97C68BD91DD5490600CFDA07 /* Assets.xcassets in Resources */,
+				54F479121E2737FC00570A78 /* GoogleService-Info.plist in Resources */,
 				97C68BD71DD5490600CFDA07 /* Main.storyboard in Resources */,
 				540830ED1E22A2AF00D9959A /* play.mp3 in Resources */,
 			);
@@ -236,6 +293,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		22F6C934D490AFE7B6B9854B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pastel.UITests/Pods-pastel.UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F69597E444D5B84D695C21C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pastel./Pods-pastel.-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F598A8ECD35C0EC2F7023DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pastel./Pods-pastel.-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		781623B38B0398B875D5C5EF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pastel.UITests/Pods-pastel.UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		796A7D1D61135BF25C416996 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CCAC6FD115CEBCE5057A8AB4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		97C68BC51DD5490600CFDA07 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -245,7 +395,10 @@
 				544850401E1EA364001E8ABD /* GameController.m in Sources */,
 				546BE8FE1E24D3F200D34659 /* gamedone.m in Sources */,
 				97C68BD11DD5490600CFDA07 /* AppDelegate.m in Sources */,
+				540F88C41E25E0FE00950458 /* tutViewController.m in Sources */,
 				97C68BCE1DD5490600CFDA07 /* main.m in Sources */,
+				54FF26861E28667500E9AE89 /* CollectionViewCell.m in Sources */,
+				54E7C5831E275954002F7F80 /* leaderBoardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +530,7 @@
 		};
 		97C68BEC1DD5490600CFDA07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2FD20D866C8E9C73C17DE92 /* Pods-pastel..debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7K6ZTDFM48;
@@ -390,6 +544,7 @@
 		};
 		97C68BED1DD5490600CFDA07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4F4C2DCFE0B77EF5BFE9507 /* Pods-pastel..release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7K6ZTDFM48;
@@ -403,6 +558,7 @@
 		};
 		97C68BEF1DD5490600CFDA07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 595EFFA28FEAFE6AC0BBA7F1 /* Pods-pastel.UITests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 7K6ZTDFM48;
 				INFOPLIST_FILE = pastel.UITests/Info.plist;
@@ -415,6 +571,7 @@
 		};
 		97C68BF01DD5490600CFDA07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FE20C9F5FC4F228669C62CD /* Pods-pastel.UITests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 7K6ZTDFM48;
 				INFOPLIST_FILE = pastel.UITests/Info.plist;
