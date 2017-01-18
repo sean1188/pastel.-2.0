@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIView *topview;
 
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *H1;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 

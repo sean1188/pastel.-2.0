@@ -19,6 +19,9 @@ NSDictionary *entries;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _H1.layer.shadowRadius = 1;
+    _H1.layer.shadowOpacity = 0.3;
+    _H1.layer.shadowOffset = CGSizeMake(0, 3);
     _topview.layer.shadowOpacity = 0.5;
     _topview.layer.shadowOffset = CGSizeMake(2, 1);
     _topview.layer.shadowRadius = 2;
@@ -26,7 +29,46 @@ NSDictionary *entries;
     [_scoreLabel setText:[NSString stringWithFormat:@"%li",(long)[[NSUserDefaults standardUserDefaults] integerForKey:@"highScore"]]];
     //
     self.ref = [[FIRDatabase database] reference];
+    if (![[NSUserDefaults standardUserDefaults] stringForKey:@"username"]) {
+        //initusername
+        UIAlertController *a = [UIAlertController alertControllerWithTitle:@"Hi there!" message:@"Enter a username" preferredStyle:UIAlertControllerStyleAlert];
+        [a addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+           textField.placeholder = @"Username";
+            textField.borderStyle = UITextBorderStyleRoundedRect;
+        }];
+        [a addAction:[UIAlertAction actionWithTitle:@"Done" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [[NSUserDefaults standardUserDefaults] setObject:a.textFields[0].text forKey:@"username"];
+            //send first score
+            [[[self.ref child:@"leaderboard"] child:[[NSUserDefaults standardUserDefaults] stringForKey:@"username"]] setValue:@{@"score": [[NSUserDefaults standardUserDefaults] objectForKey:@"highScore"]}];
+            
+            [self fetchLeaderboards];
+        }]];
+        [self presentViewController:a animated:YES completion:nil];
+    }
+    else{
+        //update user score
+        [[[self.ref child:@"leaderboard"] child:[[NSUserDefaults standardUserDefaults] stringForKey:@"username"]] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+            if ([[snapshot.value objectForKey:@"score"] intValue] < [[NSUserDefaults standardUserDefaults] integerForKey:@"highScore"]) {
+                //update highscore
+                NSDictionary *childUpdates = @{[@"/leaderboard/" stringByAppendingString:[[NSUserDefaults standardUserDefaults] stringForKey:@"username"]]: @{@"score" : [[NSUserDefaults standardUserDefaults] objectForKey:@"highScore"]}};
+                NSLog(@"%@", childUpdates);
+                [_ref updateChildValues:childUpdates];
+                [self fetchLeaderboards];
+            }
+            else{
+                [self fetchLeaderboards];
+            }
+            }
+         withCancelBlock:^(NSError * _Nonnull error) {
+             NSLog(@"%@",error.description);
+         }];
+    }
+    
+}
+
+-(void) fetchLeaderboards{
     //sign in and fetch scores
+    self.ref = [[FIRDatabase database] reference];
     [[FIRAuth auth] signInAnonymouslyWithCompletion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
         if (error) {NSLog(@"%@",error.description);}
         [[self.ref child:@"leaderboard"] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
@@ -34,11 +76,12 @@ NSDictionary *entries;
             entries = snapshot.value;
             [_collectionView reloadData];
         }
-         withCancelBlock:^(NSError * _Nonnull error) {
-             NSLog(@"%@",error.description);
-         }
+        withCancelBlock:^(NSError * _Nonnull error) {
+                                              NSLog(@"%@",error.description);
+                                          }
          ];
     }];
+
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -53,7 +96,23 @@ NSDictionary *entries;
 
 - (UICollectionViewCell  *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     CollectionViewCell *cell = [_collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    NSArray *key = [entries allKeys];
+    cell.alpha = 0;
+    [UIView animateWithDuration:0.5 animations:^{
+        cell.alpha = 1;
+    }];
+    //sort algorithm
+    NSArray *key = [entries keysSortedByValueUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        if ([[obj1 objectForKey:@"score"] integerValue] > [[obj2 objectForKey:@"score"]integerValue]) {
+            
+            return (NSComparisonResult)NSOrderedAscending;
+        }
+        if ([[obj1 objectForKey:@"score"] integerValue] < [[obj2 objectForKey:@"score"] integerValue]) {
+            
+            return (NSComparisonResult)NSOrderedDescending;
+        }
+        
+        return (NSComparisonResult)NSOrderedSame;
+    }];
     [cell.name setText:[NSString stringWithFormat:@"%@",[key objectAtIndex:indexPath.row]]];
     [cell.indexLabel setText:[NSString stringWithFormat:@"%li.",indexPath.row +1]];
     [cell.scoreLabel setText:[NSString stringWithFormat:@"%@",[[entries objectForKey:[key objectAtIndex:indexPath.row]] objectForKey:@"score"]]];
