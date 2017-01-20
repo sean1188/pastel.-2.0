@@ -226,16 +226,26 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1CL-bp-WYO">
+                                        <rect key="frame" x="8" y="21" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Back"/>
+                                        <connections>
+                                            <action selector="back:" destination="1jm-S7-fBF" eventType="touchUpInside" id="RG0-kl-x40"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="1CL-bp-WYO" firstAttribute="top" secondItem="vz0-Q6-uDX" secondAttribute="top" constant="21" id="Iz0-1Y-MiM"/>
                                     <constraint firstItem="aXl-np-1mu" firstAttribute="centerX" secondItem="m6R-y9-Yn2" secondAttribute="centerX" id="LRe-X3-pQ1"/>
                                     <constraint firstItem="nwr-WH-kk6" firstAttribute="top" secondItem="m6R-y9-Yn2" secondAttribute="bottom" constant="2" id="Us4-Gw-vnU"/>
                                     <constraint firstItem="nwr-WH-kk6" firstAttribute="centerX" secondItem="m6R-y9-Yn2" secondAttribute="centerX" id="fjS-Ie-02j"/>
                                     <constraint firstItem="m6R-y9-Yn2" firstAttribute="top" secondItem="aXl-np-1mu" secondAttribute="bottom" constant="8" id="g9C-Vn-ndf"/>
+                                    <constraint firstItem="1CL-bp-WYO" firstAttribute="leading" secondItem="vz0-Q6-uDX" secondAttribute="leading" constant="10" id="qSj-lb-4Kd"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="B8R-ct-KRP">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="B8R-ct-KRP">
                                 <rect key="frame" x="12" y="243" width="350" height="424"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MTe-fW-foA">
@@ -309,6 +319,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="xHL-d4-jmk">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="cUD-bQ-cgc"/>
+                                    <constraint firstAttribute="height" constant="30" id="iOV-vf-QBN"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -321,6 +338,8 @@
                             <constraint firstItem="vz0-Q6-uDX" firstAttribute="centerX" secondItem="B8R-ct-KRP" secondAttribute="centerX" id="Fab-0l-OKj"/>
                             <constraint firstItem="B8R-ct-KRP" firstAttribute="centerY" secondItem="woe-jI-Gaf" secondAttribute="centerY" constant="121" id="G3B-fB-HP1"/>
                             <constraint firstItem="vz0-Q6-uDX" firstAttribute="leading" secondItem="woe-jI-Gaf" secondAttribute="leading" id="ITn-Th-EEx"/>
+                            <constraint firstItem="xHL-d4-jmk" firstAttribute="centerX" secondItem="woe-jI-Gaf" secondAttribute="centerX" id="L8h-hR-dqH"/>
+                            <constraint firstItem="xHL-d4-jmk" firstAttribute="centerY" secondItem="woe-jI-Gaf" secondAttribute="centerY" id="NsU-zP-QEA"/>
                             <constraint firstAttribute="trailing" secondItem="bS0-fE-ZQd" secondAttribute="trailing" id="PSu-mP-mpF"/>
                             <constraint firstItem="bS0-fE-ZQd" firstAttribute="centerX" secondItem="nwr-WH-kk6" secondAttribute="centerX" id="XWo-GE-PnQ"/>
                             <constraint firstItem="vz0-Q6-uDX" firstAttribute="top" secondItem="woe-jI-Gaf" secondAttribute="top" id="akj-A6-D2l"/>
@@ -332,6 +351,7 @@
                     </view>
                     <connections>
                         <outlet property="H1" destination="bS0-fE-ZQd" id="dbf-V7-INb"/>
+                        <outlet property="activityView" destination="xHL-d4-jmk" id="vfA-Vm-QdI"/>
                         <outlet property="collectionView" destination="B8R-ct-KRP" id="YeJ-QM-8RV"/>
                         <outlet property="scoreLabel" destination="m6R-y9-Yn2" id="vLo-I0-4ju"/>
                         <outlet property="topview" destination="vz0-Q6-uDX" id="9NC-a5-WQ9"/>

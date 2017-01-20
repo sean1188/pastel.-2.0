@@ -11,6 +11,7 @@
 #import <FirebaseDatabase/FirebaseDatabase.h>
 #import "CollectionViewCell.h"
 @interface leaderBoardViewController ()
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityView;
 @property (strong, nonatomic) FIRDatabaseReference *ref;
 @end
 
@@ -19,6 +20,7 @@ NSDictionary *entries;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _activityView.alpha = 1;
     _H1.layer.shadowRadius = 1;
     _H1.layer.shadowOpacity = 0.3;
     _H1.layer.shadowOffset = CGSizeMake(0, 3);
@@ -75,10 +77,12 @@ NSDictionary *entries;
             NSLog(@"%@", snapshot.value);
             entries = snapshot.value;
             [_collectionView reloadData];
+            _activityView.alpha = 0;
         }
         withCancelBlock:^(NSError * _Nonnull error) {
                                               NSLog(@"%@",error.description);
-                                          }
+            _activityView.alpha = 0;
+        }
          ];
     }];
 
@@ -119,6 +123,9 @@ NSDictionary *entries;
     return cell;
 }
 
+- (IBAction)back:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:NO];
+}
 
 
 @end
