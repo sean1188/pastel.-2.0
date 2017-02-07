@@ -163,25 +163,46 @@
                                     <action selector="soundButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xpv-yp-D8l"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tut" translatesAutoresizingMaskIntoConstraints="NO" id="tye-hM-0Qh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="967-kh-2rd">
+                                <rect key="frame" x="16" y="527" width="149" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="tutDone:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zpn-Kr-MWA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="tye-hM-0Qh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0dJ-Og-Wql"/>
+                            <constraint firstAttribute="trailing" secondItem="tye-hM-0Qh" secondAttribute="trailing" id="0vU-Kp-hFU"/>
                             <constraint firstItem="NZs-FQ-Ggp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3z0-pi-UY6"/>
+                            <constraint firstItem="tye-hM-0Qh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8kO-iH-457"/>
+                            <constraint firstItem="967-kh-2rd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-97" id="9Ee-BN-jMb"/>
                             <constraint firstItem="l61-rw-CRm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-77" id="GVI-qD-tyN"/>
                             <constraint firstItem="NZs-FQ-Ggp" firstAttribute="top" secondItem="I5v-j6-NZ0" secondAttribute="bottom" constant="20" id="Hcc-un-fKa"/>
                             <constraint firstItem="l61-rw-CRm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sbt-lj-HzW"/>
                             <constraint firstItem="I5v-j6-NZ0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xri-gZ-lkK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tye-hM-0Qh" secondAttribute="bottom" id="ZkI-r0-Toz"/>
                             <constraint firstItem="I5v-j6-NZ0" firstAttribute="top" secondItem="l61-rw-CRm" secondAttribute="bottom" constant="82" id="d99-S2-cyR"/>
+                            <constraint firstItem="967-kh-2rd" firstAttribute="top" secondItem="tye-hM-0Qh" secondAttribute="bottom" constant="-140" id="d9W-cG-CgI"/>
                             <constraint firstItem="rBz-q0-GNs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iwd-HH-zp0"/>
+                            <constraint firstItem="tye-hM-0Qh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jSo-8f-xQI"/>
                             <constraint firstItem="aFn-2W-4he" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mtu-No-yeV"/>
+                            <constraint firstItem="tye-hM-0Qh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="v1x-Po-cgg"/>
                             <constraint firstItem="l61-rw-CRm" firstAttribute="top" secondItem="aFn-2W-4he" secondAttribute="bottom" constant="-15" id="yCt-R8-en9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rBz-q0-GNs" secondAttribute="bottom" constant="20" id="yTM-MI-yBz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oDH-AK-cAf"/>
                     <connections>
+                        <outlet property="doneb" destination="967-kh-2rd" id="Of3-VX-B6c"/>
                         <outlet property="header" destination="l61-rw-CRm" id="Zct-iI-JvZ"/>
                         <outlet property="logo" destination="aFn-2W-4he" id="qrN-IP-sEB"/>
+                        <outlet property="tutImg" destination="tye-hM-0Qh" id="JD7-3f-RQB"/>
                         <outletCollection property="buttons" destination="I5v-j6-NZ0" id="zar-6c-uqT"/>
                         <outletCollection property="buttons" destination="NZs-FQ-Ggp" id="jwK-AW-XZu"/>
                         <segue destination="7Tb-KK-EiD" kind="show" identifier="game" animates="NO" id="1ew-cj-3BC"/>
@@ -190,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="830" y="115"/>
+            <point key="canvasLocation" x="829.60000000000002" y="114.69265367316342"/>
         </scene>
         <!--Leaderboard-->
         <scene sceneID="L5e-a8-Ufe">
@@ -781,5 +802,6 @@
         <image name="pearlple" width="200" height="200"/>
         <image name="pink" width="200" height="200"/>
         <image name="read" width="200" height="200"/>
+        <image name="tut" width="375" height="667"/>
     </resources>
 </document>

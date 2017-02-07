@@ -13,6 +13,8 @@
     AVAudioPlayer *player;
     AVAudioPlayer *musicPlayer;
 }
+@property (weak, nonatomic) IBOutlet UIButton *doneb;
+@property (weak, nonatomic) IBOutlet UIImageView *tutImg;
 @end
 
 @implementation ViewController
@@ -36,6 +38,15 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"FL"] != YES) {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"FL"];
+        _tutImg.alpha = 1;
+        _doneb.alpha = 1;
+    }
+    else{
+        _tutImg.alpha = 0;
+        _doneb.alpha = 0;
+    }
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"sound"] == YES) {
         NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"301"  ofType:@"m4a"];
         NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
@@ -117,5 +128,11 @@
         [[NSUserDefaults standardUserDefaults] setBool:NULL forKey:@"sound"];
         [musicPlayer stop];
     }
+}
+- (IBAction)tutDone:(id)sender {
+    [UIView animateWithDuration:0.3 animations:^{
+        _doneb.alpha = 0;
+        _tutImg.alpha = 0;
+    }];
 }
 @end
