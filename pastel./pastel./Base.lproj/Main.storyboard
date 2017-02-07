@@ -152,15 +152,15 @@
                                     <action selector="leaderB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E0C-MA-nJc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBz-q0-GNs" userLabel="soundButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBz-q0-GNs" userLabel="soundButton">
                                 <rect key="frame" x="167" y="607" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="EyO-dr-Mxs"/>
                                     <constraint firstAttribute="height" constant="40" id="FY7-HR-kjX"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="ic_volume_off"/>
+                                <state key="normal" backgroundImage="ic_volume_up"/>
                                 <connections>
-                                    <action selector="soundButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mg3-Hm-W4w"/>
+                                    <action selector="soundButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xpv-yp-D8l"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -182,7 +182,6 @@
                     <connections>
                         <outlet property="header" destination="l61-rw-CRm" id="Zct-iI-JvZ"/>
                         <outlet property="logo" destination="aFn-2W-4he" id="qrN-IP-sEB"/>
-                        <outlet property="soundButton" destination="rBz-q0-GNs" id="tJw-9u-O86"/>
                         <outletCollection property="buttons" destination="I5v-j6-NZ0" id="zar-6c-uqT"/>
                         <outletCollection property="buttons" destination="NZs-FQ-Ggp" id="jwK-AW-XZu"/>
                         <segue destination="7Tb-KK-EiD" kind="show" identifier="game" animates="NO" id="1ew-cj-3BC"/>
@@ -228,8 +227,10 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1CL-bp-WYO">
                                         <rect key="frame" x="8" y="21" width="46" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <state key="normal" title="Back"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="back:" destination="1jm-S7-fBF" eventType="touchUpInside" id="RG0-kl-x40"/>
                                         </connections>
@@ -312,11 +313,11 @@
                                     <outlet property="delegate" destination="1jm-S7-fBF" id="tbm-1n-Zbh"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="H I G H S C O R E S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bS0-fE-ZQd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="L E A D E R B O A R D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bS0-fE-ZQd">
                                 <rect key="frame" x="12" y="178" width="347" height="57"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="xHL-d4-jmk">
@@ -773,7 +774,7 @@
         <image name="blu" width="200" height="200"/>
         <image name="ellow" width="200" height="200"/>
         <image name="gween" width="200" height="200"/>
-        <image name="ic_volume_off" width="24" height="24"/>
+        <image name="ic_volume_up" width="24" height="24"/>
         <image name="metal" width="200" height="200"/>
         <image name="pastel" width="1024" height="1024"/>
         <image name="pastelgrid" width="183" height="183"/>

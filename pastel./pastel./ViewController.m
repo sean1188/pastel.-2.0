@@ -11,6 +11,7 @@
 @interface ViewController ()
 {
     AVAudioPlayer *player;
+    AVAudioPlayer *musicPlayer;
 }
 @end
 
@@ -35,6 +36,19 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"sound"] == YES) {
+        NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"301"  ofType:@"m4a"];
+        NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+        musicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
+        musicPlayer.numberOfLoops = -1;
+        musicPlayer.delegate = self;
+        [musicPlayer prepareToPlay];
+        [musicPlayer play];
+        [_soundButton setImage:[UIImage imageNamed:@"ic_volume_off"] forState:UIControlStateNormal];
+    }
+    else{
+        [_soundButton setImage:[UIImage imageNamed:@"ic_volume_up"] forState:UIControlStateNormal];
+    }
     for (UIButton *button in _buttons) {
         button.alpha = 0;
         button.layer.cornerRadius = 30;
@@ -54,7 +68,10 @@
     player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
     player.delegate = self;
     [player prepareToPlay];
-    [player play];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"sound"] == YES) {
+        [player play];
+        
+    }
     //init exit animations
     [UIView animateWithDuration:0.5 animations:^{
         _logo.transform = CGAffineTransformMakeScale(0, 0);
@@ -84,5 +101,21 @@
 
 
 - (IBAction)soundButton:(id)sender {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"sound"] != YES) {
+        [_soundButton setImage:[UIImage imageNamed:@"ic_volume_off"] forState:UIControlStateNormal];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"sound"];
+        NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"301"  ofType:@"m4a"];
+        NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+        musicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
+        musicPlayer.delegate = self;
+        musicPlayer.numberOfLoops = -1;
+        [musicPlayer prepareToPlay];
+        [musicPlayer play];
+    }
+    else if ([[NSUserDefaults standardUserDefaults] boolForKey:@"sound"] == YES){
+        [_soundButton setImage:[UIImage imageNamed:@"ic volume up"] forState:UIControlStateNormal];
+        [[NSUserDefaults standardUserDefaults] setBool:NULL forKey:@"sound"];
+        [musicPlayer stop];
+    }
 }
 @end

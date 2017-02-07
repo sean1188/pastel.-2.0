@@ -41,7 +41,10 @@ NSDictionary *entries;
         [a addAction:[UIAlertAction actionWithTitle:@"Done" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             [[NSUserDefaults standardUserDefaults] setObject:a.textFields[0].text forKey:@"username"];
             //send first score
-            [[[self.ref child:@"leaderboard"] child:[[NSUserDefaults standardUserDefaults] stringForKey:@"username"]] setValue:@{@"score": [[NSUserDefaults standardUserDefaults] objectForKey:@"highScore"]}];
+            if ([[NSUserDefaults standardUserDefaults] objectForKey:@"highScore"] != nil) {
+                [[[self.ref child:@"leaderboard"] child:[[NSUserDefaults standardUserDefaults] stringForKey:@"username"]] setValue:@{@"score": [[NSUserDefaults standardUserDefaults] objectForKey:@"highScore"]}];
+            }
+            
             
             [self fetchLeaderboards];
         }]];
@@ -49,21 +52,29 @@ NSDictionary *entries;
     }
     else{
         //update user score
-        [[[self.ref child:@"leaderboard"] child:[[NSUserDefaults standardUserDefaults] stringForKey:@"username"]] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-            if ([[snapshot.value objectForKey:@"score"] intValue] < [[NSUserDefaults standardUserDefaults] integerForKey:@"highScore"]) {
-                //update highscore
-                NSDictionary *childUpdates = @{[@"/leaderboard/" stringByAppendingString:[[NSUserDefaults standardUserDefaults] stringForKey:@"username"]]: @{@"score" : [[NSUserDefaults standardUserDefaults] objectForKey:@"highScore"]}};
-                NSLog(@"%@", childUpdates);
-                [_ref updateChildValues:childUpdates];
-                [self fetchLeaderboards];
+        [[FIRAuth auth] signInAnonymouslyWithCompletion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
+            [[[self.ref child:@"leaderboard"] child:[[NSUserDefaults standardUserDefaults] stringForKey:@"username"]] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+                if ([[snapshot.value objectForKey:@"score"] intValue] < [[NSUserDefaults standardUserDefaults] integerForKey:@"highScore"]) {
+                    //update highscore
+                    NSDictionary *childUpdates = @{[@"/leaderboard/" stringByAppendingString:[[NSUserDefaults standardUserDefaults] stringForKey:@"username"]]: @{@"score" : [[NSUserDefaults standardUserDefaults] objectForKey:@"highScore"]}};
+                    NSLog(@"%@", childUpdates);
+                    [_ref updateChildValues:childUpdates];
+                    [self fetchLeaderboards];
+                }
+                else{
+                    [self fetchLeaderboards];
+                }
             }
-            else{
-                [self fetchLeaderboards];
-            }
-            }
-         withCancelBlock:^(NSError * _Nonnull error) {
-             NSLog(@"%@",error.description);
-         }];
+                                                                                                                            withCancelBlock:^(NSError * _Nonnull error) {
+                                                                                                                                   NSLog(@"%@",error.description);
+                                                                                                                                UIAlertController *a = [UIAlertController alertControllerWithTitle:@"Error" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
+                                                                                                                                [a addAction:[UIAlertAction actionWithTitle:@"okay" style:UIAlertActionStyleCancel handler:nil]];
+                                                                                                                                [self presentViewController:a animated:YES completion:nil];
+                                                                                                                                
+                                                                                                                            
+                                                                                                                }];
+        }];
+        
     }
     
 }
@@ -81,6 +92,9 @@ NSDictionary *entries;
         }
         withCancelBlock:^(NSError * _Nonnull error) {
                                               NSLog(@"%@",error.description);
+            UIAlertController *a = [UIAlertController alertControllerWithTitle:@"Error" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
+            [a addAction:[UIAlertAction actionWithTitle:@"okay" style:UIAlertActionStyleCancel handler:nil]];
+            [self presentViewController:a animated:YES completion:nil];
             _activityView.alpha = 0;
         }
          ];

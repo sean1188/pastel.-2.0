@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		540830ED1E22A2AF00D9959A /* play.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 540830EC1E22A2AF00D9959A /* play.mp3 */; };
 		540F88C41E25E0FE00950458 /* tutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 540F88C31E25E0FE00950458 /* tutViewController.m */; };
+		542276AA1E4A0D5E00C7FCC2 /* 301.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 542276A91E4A0BED00C7FCC2 /* 301.m4a */; };
 		544850401E1EA364001E8ABD /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5448503F1E1EA364001E8ABD /* GameController.m */; };
 		546BE8FE1E24D3F200D34659 /* gamedone.m in Sources */ = {isa = PBXBuildFile; fileRef = 546BE8FD1E24D3F200D34659 /* gamedone.m */; };
 		54E7C5831E275954002F7F80 /* leaderBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E7C5821E275954002F7F80 /* leaderBoardViewController.m */; };
@@ -42,6 +43,7 @@
 		540830EC1E22A2AF00D9959A /* play.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = play.mp3; sourceTree = "<group>"; };
 		540F88C21E25E0FE00950458 /* tutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tutViewController.h; sourceTree = "<group>"; };
 		540F88C31E25E0FE00950458 /* tutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tutViewController.m; sourceTree = "<group>"; };
+		542276A91E4A0BED00C7FCC2 /* 301.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 301.m4a; sourceTree = "<group>"; };
 		5448503E1E1EA364001E8ABD /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
 		5448503F1E1EA364001E8ABD /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
 		546BE8FC1E24D3F200D34659 /* gamedone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gamedone.h; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				546BE8FD1E24D3F200D34659 /* gamedone.m */,
 				97C68BD51DD5490600CFDA07 /* Main.storyboard */,
 				540830EC1E22A2AF00D9959A /* play.mp3 */,
+				542276A91E4A0BED00C7FCC2 /* 301.m4a */,
 				97C68BD81DD5490600CFDA07 /* Assets.xcassets */,
 				97C68BDA1DD5490600CFDA07 /* LaunchScreen.storyboard */,
 				97C68BDD1DD5490600CFDA07 /* Info.plist */,
@@ -276,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				542276AA1E4A0D5E00C7FCC2 /* 301.m4a in Resources */,
 				97C68BDC1DD5490600CFDA07 /* LaunchScreen.storyboard in Resources */,
 				97C68BD91DD5490600CFDA07 /* Assets.xcassets in Resources */,
 				54F479121E2737FC00570A78 /* GoogleService-Info.plist in Resources */,
