@@ -30,7 +30,6 @@
                 button.alpha = 1;
             }
             _soundButton.alpha = 1;
-            
             _header.alpha = 1;
         }];
     }];

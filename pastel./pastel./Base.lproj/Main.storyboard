@@ -163,10 +163,10 @@
                                     <action selector="soundButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xpv-yp-D8l"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tut" translatesAutoresizingMaskIntoConstraints="NO" id="tye-hM-0Qh">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tut" translatesAutoresizingMaskIntoConstraints="NO" id="tye-hM-0Qh">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="967-kh-2rd">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="967-kh-2rd">
                                 <rect key="frame" x="16" y="527" width="149" height="42"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                 <state key="normal" title="Done"/>
@@ -174,21 +174,31 @@
                                     <action selector="tutDone:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zpn-Kr-MWA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIRE TRACK BY n0_23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6w-K9-Oli">
+                                <rect key="frame" x="16" y="652.5" width="343" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tye-hM-0Qh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0dJ-Og-Wql"/>
                             <constraint firstAttribute="trailing" secondItem="tye-hM-0Qh" secondAttribute="trailing" id="0vU-Kp-hFU"/>
                             <constraint firstItem="NZs-FQ-Ggp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3z0-pi-UY6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="g6w-K9-Oli" secondAttribute="bottom" id="7G1-Ka-Gf2"/>
                             <constraint firstItem="tye-hM-0Qh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8kO-iH-457"/>
                             <constraint firstItem="967-kh-2rd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-97" id="9Ee-BN-jMb"/>
                             <constraint firstItem="l61-rw-CRm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-77" id="GVI-qD-tyN"/>
                             <constraint firstItem="NZs-FQ-Ggp" firstAttribute="top" secondItem="I5v-j6-NZ0" secondAttribute="bottom" constant="20" id="Hcc-un-fKa"/>
                             <constraint firstItem="l61-rw-CRm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sbt-lj-HzW"/>
+                            <constraint firstItem="g6w-K9-Oli" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Syk-Ez-Fks"/>
                             <constraint firstItem="I5v-j6-NZ0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xri-gZ-lkK"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tye-hM-0Qh" secondAttribute="bottom" id="ZkI-r0-Toz"/>
+                            <constraint firstItem="g6w-K9-Oli" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cgK-uC-CBj"/>
                             <constraint firstItem="I5v-j6-NZ0" firstAttribute="top" secondItem="l61-rw-CRm" secondAttribute="bottom" constant="82" id="d99-S2-cyR"/>
                             <constraint firstItem="967-kh-2rd" firstAttribute="top" secondItem="tye-hM-0Qh" secondAttribute="bottom" constant="-140" id="d9W-cG-CgI"/>
+                            <constraint firstItem="g6w-K9-Oli" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fto-q0-BM9"/>
                             <constraint firstItem="rBz-q0-GNs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iwd-HH-zp0"/>
                             <constraint firstItem="tye-hM-0Qh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jSo-8f-xQI"/>
                             <constraint firstItem="aFn-2W-4he" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mtu-No-yeV"/>

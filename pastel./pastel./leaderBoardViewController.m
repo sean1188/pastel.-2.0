@@ -39,14 +39,17 @@ NSDictionary *entries;
             textField.borderStyle = UITextBorderStyleRoundedRect;
         }];
         [a addAction:[UIAlertAction actionWithTitle:@"Done" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            [[NSUserDefaults standardUserDefaults] setObject:a.textFields[0].text forKey:@"username"];
-            //send first score
-            if ([[NSUserDefaults standardUserDefaults] objectForKey:@"highScore"] != nil) {
-                [[[self.ref child:@"leaderboard"] child:[[NSUserDefaults standardUserDefaults] stringForKey:@"username"]] setValue:@{@"score": [[NSUserDefaults standardUserDefaults] objectForKey:@"highScore"]}];
+            if (![a.textFields[0].text isEqualToString:@""]) {
+                [[NSUserDefaults standardUserDefaults] setObject:a.textFields[0].text forKey:@"username"];
+                //send first score
+                if ([[NSUserDefaults standardUserDefaults] objectForKey:@"highScore"] != nil) {
+                    [[[self.ref child:@"leaderboard"] child:[[NSUserDefaults standardUserDefaults] stringForKey:@"username"]] setValue:@{@"score": [[NSUserDefaults standardUserDefaults] objectForKey:@"highScore"]}];
+                }
+                
+                
+                [self fetchLeaderboards];
             }
             
-            
-            [self fetchLeaderboards];
         }]];
         [self presentViewController:a animated:YES completion:nil];
     }
