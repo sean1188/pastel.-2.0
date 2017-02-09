@@ -216,7 +216,7 @@ int startTimerVal = 0;
         j ++;
         if (j == rand) {
             [UIView animateWithDuration:0.1 animations:^{
-                imge.transform = CGAffineTransformMakeScale(1.2, 1.2);
+                imge.transform = CGAffineTransformMakeScale(1.4, 1.4);
         
             }completion:^(BOOL finished) {
                 comboTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(comboTimeLimit) userInfo:nil repeats:NO];
